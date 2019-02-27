@@ -3,7 +3,8 @@ import java.util.Comparator;
 public enum ShopOrderComparator {
     NAME(new NameComparator()),
     PRICE(new PriceComparator()),
-    STATUS(new StatusComparator());
+    STATUS(new StatusComparator()),
+    NAME_PRICE(new NamePriceComparator(new NameComparator(), new PriceComparator()));
 
     private Comparator<ShopOrder> comparator;
 
